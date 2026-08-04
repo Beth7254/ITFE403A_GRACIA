@@ -1,0 +1,60 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.announcement-card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px;
+  background: white;
+  border: 2px solid #2196f3;
+  border-radius: 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+  /* Hover animation */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+
+  cursor: pointer;
+}
+
+/* Hover effect */
+.announcement-card:hover {
+  transform: translateY(-6px);
+  border-color: #05008e;
+  box-shadow: 0 12px 28px rgba(33, 150, 243, 0.25);
+  background-color: #fdfdff;
+}
+
+.announcement-card h2 {
+  margin: 0 0 12px;
+  color: #05008e;
+  font-family: "Avant Garde", sans-serif;
+  font-size: 22px;
+
+  /* Smooth title color transition */
+  transition: color 0.3s ease;
+}
+
+.announcement-card:hover h2 {
+  color: #2196f3;
+}
+
+.announcement-card p {
+  margin: 0 0 15px;
+  color: #444;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.announcement-card span {
+  color: #777;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}

@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Header Background */
+  background: #05008e;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(77, 5, 91, 0.15);
+}
+
+/* Logo / Website Title */
+h2 {
+  margin: 0;
+  color: white;
+  font-family: "Avant Garde", sans-serif;
+  font-size: 24px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-family: "Avant Garde", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #c1aedf;
+}
