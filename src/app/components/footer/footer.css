@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 20px;
+
+  text-align: center;
+  background: #05008e;
+  color: white;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
