@@ -1,17 +1,21 @@
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
 }
 
 .announcement-card {
+  display: grid;
   width: 100%;
   box-sizing: border-box;
   padding: 25px;
   background: white;
   border: 2px solid #2196f3;
   border-radius: 18px;
+  gap: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 
   /* Hover animation */
