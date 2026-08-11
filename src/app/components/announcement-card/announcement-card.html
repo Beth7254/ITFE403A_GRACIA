@@ -1,50 +1,21 @@
-<div class="announcement-card">
-  <h2 class="announcement-title">{{ title1 }}</h2>
-  <p class="announcement-content">{{ body1 }}</p>
+<div class="announcement-card" *ngFor="let announcement of announcements">
+  <h2>{{ announcement.title }}</h2>
+
+  <p>{{ announcement.body }}</p>
+
+  <span> <strong>Author:</strong> {{ announcement.author }} </span>
+
+  <span> <strong>Date:</strong> {{ announcement.date }} </span>
 </div>
 
-<div class="announcement-card">
-  <h2 class="announcement-title">{{ title2 }}</h2>
-  <p class="announcement-content">{{ body2 }}</p>
+
+<div class="student-list">
+  <h2>Student List</h2>
+
+  <div
+    class="student-card"
+    *ngFor="let student of students; let i = index">
+    <h3>#{{ i + 1 }} {{ student.name }}</h3>
+    <p>{{ student.course }} • {{ student.year }}</p>
+  </div>
 </div>
-
-<div class="announcement-card">
-  <h2 class="announcement-title">{{ title3 }}</h2>
-  <p class="announcement-content">{{ body3 }}</p>
-</div>
-
-<div class="announcement-card">
-  <h2 class="announcement-title">{{ title4 }}</h2>
-  <p class="announcement-content">{{ body4 }}</p>
-</div>
-
-<div class="announcement-card">
-  <h2 class="announcement-title">{{ title5 }}</h2>
-  <p class="announcement-content">{{ body5 }}</p>
-</div>  
-
- <div class="announcement-card">
-  <h2 class="announcement-title">{{ title6 }}</h2>
-  <p class="announcement-content">{{ body6 }}</p>
-</div>
-
-<div class="announcement-card">
-  <h2 class="announcement-title">{{ title7 }}</h2>
-  <p class="announcement-content">{{ body7 }}</p>
-</div>
-
-<div class="announcement-card">
-  <h2 class="announcement-title">{{ title8 }}</h2>
-  <p class="announcement-content">{{ body8 }}</p>
-</div>
-
-<div class="announcement-card">
-  <h2 class="announcement-title">{{ title9 }}</h2>
-  <p class="announcement-content">{{ body9 }}</p>
-</div>  
-
-<div class="announcement-card">
-  <h2 class="announcement-title">{{ title10 }}</h2>
-  <p class="announcement-content">{{ body10 }}</p>
-</div>
-

@@ -12,7 +12,7 @@ export class ProfileCard {
   studentNumber = '23017773';
   course = 'BS Information Technology';
   yearLevel = '4th Year';
-  section = '___';
+  section = 'NA';
   nickname = 'beth';
   grade = '__';
 }
