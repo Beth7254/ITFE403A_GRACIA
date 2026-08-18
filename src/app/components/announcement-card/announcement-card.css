@@ -14,13 +14,7 @@
   border: 2px solid #2196f3;
   border-radius: 18px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease,
-    background-color 0.3s ease;
-
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
 }
 
@@ -78,13 +72,7 @@
   border: 2px solid #2196f3;
   border-radius: 18px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease,
-    background-color 0.3s ease;
-
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
 }
 
@@ -107,4 +95,45 @@
   color: #444;
   font-family: Arial, sans-serif;
   line-height: 1.5;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  background: #eef2f7;
+  color: #333;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn:hover { transform: translateY(-2px); }
+.favorite-btn { background: #f0f0f0; }
+.favorite-btn.active { background: #ffd700; color: #5a4600; }
+.edit-btn { background: #e3f2fd; color: #05008e; }
+.pin-btn { background: #e3f2fd; color: #05008e; }
+.pin-btn.active { background: #2196f3; color: white; }
+.delete-btn { background: #ffe3e3; color: #b30000; }
+.delete-btn:hover { background: #ffc9c9; }
+
+.student-card.favorited { border-color: #ffd700; background-color: #fffbea; }
+.announcement-card.pinned { border-color: #2196f3; background-color: #eef7ff; }
+
+.editing-banner {
+  background: #fff3cd;
+  border: 1px solid #ffe08a;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #7a5b00;
+  font-family: Arial, sans-serif;
+  margin-bottom: 15px;
 }

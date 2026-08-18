@@ -1,21 +1,50 @@
-<div class="announcement-card" *ngFor="let announcement of announcements">
+<div
+  class="announcement-card"
+  [class.pinned]="announcement.important"
+  *ngFor="let announcement of announcements; let i = index"
+>
   <h2>{{ announcement.title }}</h2>
-
   <p>{{ announcement.body }}</p>
-
   <span> <strong>Author:</strong> {{ announcement.author }} </span>
-
   <span> <strong>Date:</strong> {{ announcement.date }} </span>
-</div>
 
+  <div class="card-actions">
+    <button
+      class="btn pin-btn"
+      [class.active]="announcement.important"
+      (click)="togglePin(announcement)"
+    >
+      {{ announcement.important ? '📌 Pinned' : '📌 Pin' }}
+    </button>
+    <button class="btn delete-btn" (click)="deleteAnnouncement(i)">🗑️Delete</button>
+  </div>
+</div>
 
 <div class="student-list">
   <h2>Student List</h2>
 
+  <p class="editing-banner" *ngIf="editingStudentName">
+    Editing {{ editingStudentName }}
+  </p>
+
   <div
     class="student-card"
-    *ngFor="let student of students; let i = index">
+    [class.favorited]="student.favorite"
+    *ngFor="let student of students; let i = index"
+  >
     <h3>#{{ i + 1 }} {{ student.name }}</h3>
     <p>{{ student.course }} • {{ student.year }}</p>
+
+    <div class="card-actions">
+      <button
+        class="btn favorite-btn"
+        [class.active]="student.favorite"
+        (click)="toggleFavorite(student)"
+      >
+        {{ student.favorite ? '⭐ Favorited' : '☆ Favorite' }}
+      </button>
+      <button class="btn edit-btn" (click)="editStudent(student)">✎ Edit</button>
+      <button class="btn delete-btn" (click)="deleteStudent(i)">🗑️ Delete</button>
+    </div>
   </div>
 </div>
