@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-add-student',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './header.html',
-  styleUrl: './header.css'
+  templateUrl: './add-student.html',
+  styleUrl: './add-student.css',
 })
-export class Header {}
+export class AddStudent {
+}

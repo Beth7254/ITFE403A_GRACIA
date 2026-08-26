@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-announcement-card',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [NgFor],
   templateUrl: './announcement-card.html',
   styleUrl: './announcement-card.css',
 })
 export class AnnouncementCard {
-
-  loading = true;
 
   announcements = [
     {
@@ -85,55 +83,6 @@ export class AnnouncementCard {
     }
   ];
 
-  students = [
-    {
-      name: 'Niel Jhon Celocia',
-      course: 'BSIT',
-      year: '4th Year',
-      favorite: false,
-      active: true
-    },
-    {
-      name: 'Jownie Ann Malate',
-      course: 'BSIT',
-      year: '4th Year',
-      favorite: false,
-      active: false
-    },
-    {
-      name: 'Bonna Mae Pitogo',
-      course: 'BSIT',
-      year: '4th Year',
-      favorite: false,
-      active: true
-    },
-    {
-      name: 'Kurt Wojtyle Rizal',
-      course: 'BSIT',
-      year: '4th Year',
-      favorite: false,
-      active: false
-    }
-  ];
-
-  editingStudentName: string | null = null;
-
-  toggleFavorite(student: any) {
-    student.favorite = !student.favorite;
-    console.log(`${student.name} favorite set to ${student.favorite}`);
-  }
-
-  deleteStudent(index: number) {
-    const removed = this.students[index];
-    this.students.splice(index, 1);
-    console.log(`Deleted student: ${removed.name}`);
-  }
-
-  editStudent(student: any) {
-    this.editingStudentName = student.name;
-    console.log(`Editing ${student.name}`);
-  }
-
   togglePin(announcement: any) {
     announcement.important = !announcement.important;
     console.log(`${announcement.title} pinned: ${announcement.important}`);
@@ -143,10 +92,6 @@ export class AnnouncementCard {
     const removed = this.announcements[index];
     this.announcements.splice(index, 1);
     console.log(`Deleted announcement: ${removed.title}`);
-  }
-
-  finishLoading() {
-    this.loading = false;
   }
 
 }

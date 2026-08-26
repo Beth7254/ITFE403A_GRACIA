@@ -1,15 +1,25 @@
 :host {
   display: block;
   width: 100%;
+  margin: 0;
 }
 
 footer {
   width: 100%;
+  min-height: 70px;
   box-sizing: border-box;
-  padding: 20px;
-  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 22px 20px;
+
   background: #05008e;
   color: white;
+
   font-family: Arial, sans-serif;
   font-size: 14px;
+
+  margin-top: 50px;
 }

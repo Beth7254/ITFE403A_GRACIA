@@ -1,19 +1,15 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { Header } from './components/header/header';
-import { Footer } from './components/footer/footer';
-import { ProfileCard } from './components/profile-card/profile-card';
-import { AnnouncementCard } from './components/announcement-card/announcement-card';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
-    Header,
-    ProfileCard,
-    AnnouncementCard,
-    Footer
+    RouterOutlet,
+    Header
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-}
+export class App {}
