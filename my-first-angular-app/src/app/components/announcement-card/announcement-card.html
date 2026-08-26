@@ -1,13 +1,31 @@
-<div class="announcement-card">
+<div
+  class="announcement-card"
+  *ngFor="let announcement of announcements; let i = index"
+  [class.pinned]="announcement.important"
+>
+  <h2>{{ announcement.title }}</h2>
 
-  <h2>Student Portal Launch</h2>
+  <p>{{ announcement.body }}</p>
 
-  <p>
-    The new Don Bosco Student Portal is now available.
-    Students can access important school information,
-    announcements, and student services.
-  </p>
+  <span>
+    <strong>Author:</strong>
+    {{ announcement.author }}
+  </span>
 
-  <span>August 4, 2026</span>
+  <span>
+    <strong>Date:</strong>
+    {{ announcement.date }}
+  </span>
 
+  <div class="card-actions">
+    <button
+      class="btn pin-btn"
+      [class.active]="announcement.important"
+      (click)="togglePin(announcement)"
+    >
+      {{ announcement.important ? '📌 Pinned' : '📌 Pin' }}
+    </button>
+
+    <button class="btn delete-btn" (click)="deleteAnnouncement(i)">🗑️ Delete</button>
+  </div>
 </div>

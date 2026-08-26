@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './profile-card.html',
   styleUrl: './profile-card.css'
 })
+
 export class ProfileCard {
+  studentName = 'Mary Beth Gracia';
+  studentNumber = '23017773';
+  course = 'BS Information Technology';
+  yearLevel = '4th Year';
+  section = 'NA';
+  nickname = 'beth';
+  grade = '__';
 }
